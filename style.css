@@ -528,7 +528,7 @@ main{
         font-size: clamp(10px, 2vw, 120px);
       }
       .card-front .text_storitev h2{
-        font-size: clamp(12px, 3vw, 120px);
+        font-size: clamp(12px, 2.6vw, 120px);
       }
 }
 @media(max-width:613px){
