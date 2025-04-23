@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins';
+}
+header{
+    background-color:#3f3f3e;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+
+
+}
+ul li a{
+    position: relative; 
+}
+.nav_bar{
+    padding-top: 1%;
+    display: flex;
+    justify-content: center;
+
+}
+.nav_bar a{
+    max-width: max-content;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-bottom: solid hidden;
+
+}
+.nav_link:hover{
+    color: #3f3f3e;
+    transition: 0.3s;
+    
+}
+.navlist a::after{
+    content: '';
+    position: absolute;
+    left: -.2vw;
+    right: 5vw;
+    bottom: 0;
+    width: 110%;
+    height: 100%;
+    background: #F4A950;
+    border-radius: 50px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s;
+
+}
+.navlist a:hover::after{
+    transform-origin: center;
+    transform: scaleX(1);
+
+}
+
+
+.logo1{
+    width: 30%;
+    display: flex;
+
+}
+.logo1 img{
+    width: clamp(100px, 5vw, 120px);
+
+}
+.nav_bar{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+
+}
+
+.navlist li{
+    display: inline;
+    padding: 30px;
+
+
+}
+#menu-icon{
+    color: white;
+    font-size: 55px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+
+
+@media (max-width:1035px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 10%;
+        right: -100%;
+        width: 200px;
+        height: 40vh;
+        background: #3f3f3e;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        display: flex;
+        margin: 8px 0;
+        margin-left: 0;
+    }
+    .navlist.open{
+        right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+.naslov{
+    min-height: 30vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: clamp(24px, 1.7vw, 60px);
+    padding-bottom: 2vw;
+    color: #F4A950;
+    -webkit-text-stroke: 1px black;
+    text-align: center;
+}
+
+
+
+
+
+
+.slika_besedilo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    gap: 2vw;
+}
+.slika{
+    width: 50%;
+}
+.slika img{
+    width: 100%;
+}
+.text{
+    font-size: clamp(16px, .9vw, 120px);
+    font-weight: 100;
+    padding-bottom: 5vw;
+}
+
+
+@media(max-width: 1280px){
+    .slika{
+        width: 70%;
+    }
+}
+@media(max-width: 735px){
+    .slika{
+        width: 80%;
+    }
+}
+@media(max-width: 395px){
+    .slika{
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: #3f3f3e;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.naslov_noga{
+    display: flex;
+    justify-content: center;
+    padding-top: 3vw;
+    color: #F4A950;
+}
+.cela_noga{
+    padding-bottom: 3vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.naslov_storitve_noga{
+    color: #fff;
+    font-variant: small-caps;
+    font-size: clamp(15px, 1.5vw, 120px);
+}
+.storitve_noga{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+}
+.storitve_noga a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 100;
+    font-size: clamp(12px, 1vw, 120px);
+}
+.noga{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.noga a{
+    color: #fff;
+    font-size: clamp(12px, 1vw, 120px);
+    font-weight: 100;
+    text-decoration: none;
+}
+.lokacija_noga{
+    display: flex;
+    align-items: center;
+    gap: .6vw;
+}
+.tel_noga{
+    display: flex;
+    gap: .6vw;
+}
+.mail_noga{
+    display: flex;
+    gap: .6vw;
+
+}
+
+.navbar2{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.navbar2 li a{
+    color: white;
+    font-size: clamp(10px, 1.2vw, 20px);
+    text-decoration: none;
+    font-weight: 100;
+}
+
+
+
+@media(max-width:685px){
+    .cela_noga{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 5vw;
+    }
+    .naslov_noga{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

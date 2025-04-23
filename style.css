@@ -1,0 +1,1176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added to include padding and border in width/height */
+}
+
+body {
+    font-family: 'Poppins';
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
+}
+
+ul li a {
+    position: relative; 
+}
+
+.nav_bar {
+    padding-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_bar a {
+    max-width: max-content;
+    text-decoration: none;
+    color: #535351;
+    font-size: 20px;
+    border-bottom: solid hidden;
+    z-index: 1;
+}
+
+.nav_link:hover {
+    color: #000;
+    transition: 0.3s;
+}
+
+.nav_link::after {
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    left: -.2vw;
+    right: 5vw;
+    bottom: 0;
+    width: 110%;
+    height: 100%;
+    background: #F4A950;
+    transform: scaleX(0);
+    z-index: -1;
+    transform-origin: center;
+    transition: transform .3s;
+}
+
+.nav_link:hover::after {
+    transform-origin: center;
+    transform: scaleX(1);
+}
+
+.logo {
+    width: 30%;
+    display: flex;
+}
+
+.logo img {
+    width: clamp(100px, 5vw, 120px);
+}
+
+.nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.navlist li {
+    display: inline;
+    padding: 30px;
+}
+
+#menu-icon {
+    color: #F4A950;
+    font-size: 55px;
+    z-index: 1101;
+    cursor: pointer;
+    display: none;
+}
+
+.sticky {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Make sure it's above other content */
+    background: #fffcfc;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (max-width:1035px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 10%;
+        right: -100%;
+        width: 250px;
+        height: 60vh;
+        background: #3f3f3e;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        display: flex;
+        margin: 8px 0;
+        margin-left: 0;
+        color: #fff;
+
+    }
+    .navlist.open{
+        right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+.glava{
+    background-image: url(slike/slika_glava.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content:left;
+    justify-content: space-around;
+    flex-shrink: 1;
+
+}
+.glava .leva_text{
+    display: flex;
+    padding-left: 5vw;
+    align-items: center;
+}
+.glava .leva{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #F4A950;
+    width: 60%;
+}
+.glava .leva h1{
+    font-size: clamp(30px, 6vw, 200px);
+    font-weight: 600;
+    color: #F4A950;
+}
+.glava .leva h3{
+    font-size: clamp(14px, 1.5vw, 100px);
+    font-weight: 400;
+    text-align: left;
+    color: #3f3f3e;
+}
+.gumb_glava{
+    padding-top: 2vw;
+}
+.glava .leva button{
+    padding:26px ;
+    border: none;
+    font-size: clamp(12px, 1.5vw, 12px);
+    color: #3f3f3e;
+    background: linear-gradient(to left, #fff 50%, #F4A950 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    transition: background-position 0.3s ease, color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.glava .leva button:hover {
+    background-position: left;
+    color: #3f3f3e;
+    cursor: pointer;
+}
+.spodi{
+    display: none;
+}
+
+
+@media(max-width:1025px){
+    .glava{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .leva_text{
+        justify-content: center;
+    }
+    .glava .leva{
+        width: 90%;
+    }
+    .leva_text .leva h1{
+        font-size: clamp(20px, 7vw, 120px );
+    }
+    .leva_text .leva h3{
+        font-size: clamp(14px, 2vw, 120px );
+    }
+}
+@media(max-width:900px){
+    .glava .leva button{
+        font-size: clamp(8px, .5vw, 120px);
+        padding: 15px;
+    }
+}
+@media(max-width:730px){
+    .leva_text .leva h1{
+        font-size: clamp(20px, 8vw, 120px );
+    }
+    .leva_text .leva h3{
+        font-size: clamp(14px, 3vw, 120px );
+    }
+}
+@media(max-width: 647px){
+    .spodi{
+        display:flex;
+        position:relative;
+        width: 100%;
+        align-items: flex-end;
+        justify-content: right;
+    }
+    .spodi img{
+        width: 85%;
+    }
+    .leva_text{
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content:space-between;
+        height: 80vh;
+    }
+    .glava{
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 80vh;
+    }
+}
+@media(max-width: 550px){
+    .spodi img{
+        width: 100%;
+    }
+}
+@media(max-width: 450px){
+    .spodi img{
+        width: 110%;
+    }
+}
+
+
+
+
+
+
+main{
+    color: rgba(37,53,81,255);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+@media(max-width: 575px){
+    main{
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.text_pod_naslovom{
+    display: flex;
+    flex-direction: column;
+    padding-left: 11vw;
+    padding-right: 12vw;
+}
+.text_gumb{
+    display: flex;
+    gap: 15vw;
+    align-items: flex-end;
+}
+.text_gumb .text{
+    font-size: clamp(14px, 1vw, 120px);
+}
+.naslov1{
+    font-size: clamp(18px, 1.5vw, 150px);
+    color: #F4A950;
+}
+.naslov1 h1{
+    font-weight: 600;
+}
+
+.naslov2{
+    letter-spacing: 5px;
+    font-size: clamp(16px, 5vw, 30px);
+    display: flex;
+    height: 10em;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 8%;
+    text-wrap: wrap;
+    flex-shrink: 1;
+}
+.naslov2 h1{
+    font-weight: 600;
+}
+
+
+.del1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 5vw;
+}
+
+.slike_storitve{
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+}
+.storitev_1del{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.storitev_2del{
+    display: flex;
+    justify-content: space-evenly;
+}
+.slika_storitev{
+    height: 65%;
+    width: 100%;
+}
+.slika_storitev img{
+    width: 100%;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    width: 18vw;
+    height: 20vw;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .card-front {
+    background-color: #fff;
+    color: #3f3f3e;
+    text-align: center;
+    font-variant: small-caps;
+  }
+  .card-front .text_storitev h2{
+    font-size: clamp(12px, 2vw, 120px);
+  }
+  
+  .card-back {
+    background-color: #F4A950;
+    color: #3f3f3e;
+    transform: rotateY(180deg);
+    text-align: left;
+  }
+
+  .opis_storitve h4{
+    padding: 20px;
+    font-size: clamp(4px, 1vw, 120px);
+  }
+  .opis_storitve h4{
+    font-weight: 400;
+  }
+  
+.gumb_o_storitvi button{
+    padding: 10px;
+    background: #3f3f3e;
+    color: #F4A950;
+    border:none;
+    font-size: clamp(10px, 1vw, 120px);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.gumb_o_storitvi button:hover{
+    cursor: pointer;
+    background: #fff;
+    color: #3f3f3e;
+    transition: .3s;
+}
+
+
+
+
+.gumb_storitve button{
+    width: 10vw;
+    padding: 10px;
+    color: #F4A950;
+    border:none;
+    font-size: clamp(14px, 1vw, 120px);
+    background: linear-gradient(to left, #3f3f3e 50%, #F4A950 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    transition: background-position 0.3s ease, color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    font-weight: 100;
+}
+.gumb_storitve button:hover{
+    background-position: left;
+    cursor: pointer;
+    color: #3f3f3e;
+    transition: .3s;
+}
+@media(max-width: 1250px){
+    .gumb_storitve button{
+        width: 15vw;
+    }
+}
+@media(max-width: 833px){
+    .gumb_storitve button{
+        width: 20vw;
+    }
+    .text_gumb{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2vw;
+    }
+}
+@media(max-width: 625px){
+    .gumb_storitve button{
+        width: 25vw;
+    }
+}
+@media(max-width: 416px){
+    .gumb_storitve button{
+        width: 35vw;
+    }
+}
+@media(max-width: 357px){
+    .gumb_storitve button{
+        width: 40vw;
+    }
+}
+
+
+@media(max-width: 1308px){
+    .opis_storitve h4{
+        font-size: clamp(8px, .9vw, 120px);
+      }
+}
+@media(max-width: 950px){
+    .slike_storitve{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .storitev_1del{
+        flex-direction: column;
+        gap: 5vw;
+    }
+    .storitev_2del{
+        flex-direction: column;
+        gap: 5vw;
+    }
+    .card {
+        width: 30vw;
+        height: 35vw;
+        perspective: 1000px;
+      }
+      .opis_storitve h4{
+        font-size: clamp(8px, 1.6vw, 120px);
+      }
+      .gumb_o_storitvi button{
+        font-size: clamp(10px, 2vw, 120px);
+      }
+      .card-front .text_storitev h2{
+        font-size: clamp(12px, 3.5vw, 120px);
+      }
+}
+@media(max-width:613px){
+    .slike_storitve{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .card {
+        width: 55vw;
+        height: 62vw;
+        perspective: 1000px;
+      }
+      .opis_storitve h4{
+        font-size: clamp(8px, 3vw, 120px);
+      }
+      .gumb_o_storitvi button{
+        font-size: clamp(10px, 3vw, 120px);
+      }
+      .card-front .text_storitev h2{
+        font-size: clamp(12px, 6vw, 120px);
+      }
+}
+@media(max-width: 394px){
+    .opis_storitve h4{
+        font-size: clamp(8px, 2.9vw, 120px);
+      }
+      .gumb_o_storitvi button{
+        font-size: clamp(10px, 2.9vw, 120px);
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.onas{
+    padding-left: 11vw;
+    padding-right: 5vw;
+    padding-top: 10vw;
+    padding-bottom: 5vw;
+}
+
+.o_nas{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.model{
+    height: 70vh;
+    width: clamp(20px, 50vh, 1050px);
+}
+@media(max-width:650px){
+    .model{
+        height: 40vh;
+        width: clamp(10px, 35vh, 1050px);
+    }
+}
+.mapa_text{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.o_nas .mapa_text .text{
+    font-size: clamp(14px, 1vw, 120px);
+}
+.gumb_vec{
+    width: fit-content;
+}
+.gumb_vec a{
+    text-decoration: none;
+    color: #F4A950;
+    font-size: clamp(14px, 1.5vw, 120px);
+    width: max-content;
+
+}
+.gumb_vec a::after{
+    content: '';
+    display: flex;
+    flex-direction: column;
+    height: 2px;
+    width: 50%;
+    background: #F4A950;
+    transform-origin: center;
+    transition: transform .3s;
+}
+.gumb_vec a:hover::after{
+    transform-origin: left;
+    width: 600%;
+    transition: .5s;
+}
+
+
+
+@media(max-width: 1035px){
+    .o_nas{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reference_vse {
+    height: fit-content;
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding-bottom: 10vw;
+}
+
+.naslov_referenca {
+    position: sticky; /* Keep the title at the top */
+    top: 0; /* Keep it at the top */
+    background-color: white; /* Add background for visibility */
+    z-index: 10; /* Ensure the title is above images */
+    padding: 10px; /* Add some space around the title */
+}
+
+.slike_ref::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome */
+}
+
+.slike_ref {
+    display: flex;
+    gap: 2vw;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding-left: 7vw; /* Consider adjusting this */
+    padding-right: 7vw; /* Add right padding to balance */
+    max-width: 100vw; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.slika img {
+    width: 20vw; /* Ensure this does not exceed viewport */
+    height: 30vw; /* Limit height to maintain aspect ratio */
+    object-fit: cover;
+}
+
+.reference_vse .referenca .naslov1 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2vw;
+    color: #3f3f3e;
+}
+
+.reference_vse .referenca .naslov1 h2::after {
+    content: '';
+    display: flex;
+    flex-direction: column;
+    height: 2px;
+    width: 100%;
+    background: #3f3f3e;
+}
+
+.gumb_ref {
+    padding-left: 7vw;
+    padding-top: 2vw;
+}
+
+.gumb_ref button {
+    width: 15vw; /* Ensure this does not exceed viewport */
+    padding: 10px;
+    color: #F4A950;
+    border: none;
+    font-size: clamp(16px, 1.3vw, 120px);
+    background: linear-gradient(to left, #3f3f3e 50%, #F4A950 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    transition: background-position 0.3s ease, color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    font-weight: 100;
+}
+
+.gumb_ref button:hover {
+    background-position: left;
+    cursor: pointer;
+    color: #3f3f3e;
+    transition: .3s;
+}
+
+
+
+
+
+
+
+@media(max-width: 800px){
+    .slika img {
+        width: 50vw; /* Ensure this does not exceed viewport */
+        height: 60vw; /* Limit height to maintain aspect ratio */
+        object-fit: cover;
+    }
+}
+@media(max-width: 475px){
+    .slika img {
+        width: 70vw; /* Ensure this does not exceed viewport */
+        height: 80vw; /* Limit height to maintain aspect ratio */
+        object-fit: cover;
+    }
+}
+@media(max-width:1050px){
+    .gumb_ref button{
+        width: 20vw;
+    }
+}
+@media(max-width:770px){
+    .gumb_ref button{
+        width: 25vw;
+    }
+}
+@media(max-width:620px){
+    .gumb_ref button{
+        width: 30vw;
+    }
+}
+@media(max-width:425px){
+    .gumb_ref button{
+        width: 35vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.kontakt_obrazec{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vw;
+}
+.item{
+    width: 100%;
+    height: 650px;
+    max-width: 70%;
+    background: #F4A950;
+    border-radius: 20px;
+    box-shadow: 0 0 30px 5px rgba(0,0,0,5);
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+}
+
+@media(max-width:1000px){
+    .item{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 15vw;
+        max-width: 90%;
+    }
+}
+@media(max-width:711px){
+    .item{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 20vw;
+        max-width: 90%;
+    }
+}
+@media(max-width:540px){
+    .item{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 25vw;
+        max-width: 90%;
+    }
+}
+@media(max-width:440px){
+    .item{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 30vw;
+        max-width: 90%;
+    }
+}
+
+.contact{
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.slika_kontakt img{
+    width: 60%;
+    border-radius: 0;
+}
+.contact .slika_kontakt{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.third_text{
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding-top: 10px;
+    color: #3f3f3e;
+}
+form{
+    padding: 0 50px;
+    height: 100%;
+    width: 100%;
+}
+.input_box{
+    height: 40px;
+    width: 70%;
+    margin: 30px 0;
+    position: relative;
+}
+.input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 10px;
+    color: #3f3f3e;
+    font-size: 16px;
+}
+.input_box label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    padding-left: 10px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    font-weight: 500;
+    color: #3f3f3e;
+    transition: 0.3s;
+}
+.input_box .input:focus ~ label,
+.input_box .input:valid ~ label{
+    top: -1px;
+    left: 10px;
+    background: #F4A950;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 0;
+}
+textarea.input{
+    resize: none;
+    min-height: 150px;
+    overflow: auto;
+}
+.btn{
+    position: relative;
+    top: 100px;
+    width: 10vw; /* Ensure this does not exceed viewport */
+    padding: 10px;
+    color: #F4A950;
+    border: none;
+    border-radius: 10px;
+    font-size: clamp(14px, 1vw, 120px);
+    background: linear-gradient(to left, #3f3f3e 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    transition: background-position 0.3s ease, color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    font-weight: 100;
+}
+
+.btn:hover {
+    background-position: left;
+    cursor: pointer;
+    color: #3f3f3e;
+    transition: .3s;
+}
+
+
+
+
+
+
+
+.lokacija_kontakt{
+    text-align: center;
+    padding-top: 2vw;
+}
+.lokacija_kontakt a{
+    color: #000;
+    font-size: clamp(12px, 1vw, 120px);
+}
+.mail{
+    text-align: center;
+    padding-top: 1vw;
+}
+.mail a{
+    color: black;
+    font-size: clamp(12px, 1vw, 120px);
+}
+.telefon a{
+    color: black;
+    font-size: clamp(12px, 1vw, 120px);
+}
+.telefon{
+    text-align: center;
+    padding-top: 1vw;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:1133px){
+    .btn{
+        width: 15vw;
+    }
+}
+@media(max-width:755px){
+    .btn{
+        width: 20vw;
+    }
+}
+@media(max-width:566px){
+    .btn{
+        width: 25vw;
+    }
+}
+@media(max-width:453px){
+    .btn{
+        width: 33vw;
+    }
+}
+
+@media(max-width:1000px){
+    .contact{
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+}
+
+@media(max-width:575px){
+    .input_box{
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: #3f3f3e;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.naslov_noga{
+    display: flex;
+    justify-content: center;
+    padding-top: 3vw;
+    color: #F4A950;
+}
+.cela_noga{
+    padding-bottom: 3vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.naslov_storitve_noga{
+    color: #fff;
+    font-variant: small-caps;
+    font-size: clamp(15px, 1.5vw, 120px);
+}
+.storitve_noga{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+}
+.storitve_noga a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 100;
+    font-size: clamp(12px, 1vw, 120px);
+}
+.noga{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.noga a{
+    color: #fff;
+    font-size: clamp(12px, 1vw, 120px);
+    font-weight: 100;
+    text-decoration: none;
+}
+.lokacija_noga{
+    display: flex;
+    align-items: center;
+    gap: .6vw;
+}
+.tel_noga{
+    display: flex;
+    gap: .6vw;
+}
+.mail_noga{
+    display: flex;
+    gap: .6vw;
+
+}
+
+.navbar2{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.navbar2 li a{
+    color: white;
+    font-size: clamp(10px, 1.2vw, 20px);
+    text-decoration: none;
+    font-weight: 100;
+}
+
+
+
+@media(max-width:685px){
+    .cela_noga{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 5vw;
+    }
+    .naslov_noga{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
