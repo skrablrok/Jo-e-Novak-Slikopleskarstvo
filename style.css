@@ -409,7 +409,7 @@ main{
     font-variant: small-caps;
   }
   .card-front .text_storitev h2{
-    font-size: clamp(12px, 1.8vw, 120px);
+    font-size: clamp(12px, 1.5vw, 120px);
   }
   
   .card-back {
