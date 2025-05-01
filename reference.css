@@ -558,6 +558,7 @@ footer{
     padding-top: .5vw;
     padding-bottom: .5vw;
     font-size: clamp(8px, .6vw, 120px);
+    color: #fff;
 }
 .avtorske a{
     color: #fff;
