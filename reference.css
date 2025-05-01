@@ -541,3 +541,24 @@ footer{
         text-align: center;
     }
 }
+
+
+
+
+
+
+
+
+.avtorske{
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+.avtorske p{
+    padding-top: .5vw;
+    padding-bottom: .5vw;
+    font-size: clamp(8px, .6vw, 120px);
+}
+.avtorske a{
+    color: #fff;
+}
