@@ -66,29 +66,29 @@
                     <h4 class="third_text" >Kontaktirajte nas</h4><br>
                     <form action="https://formsubmit.co/slikopleskarstvo.joze.novak@gmail.com" method="POST">
                         <div class="input_box">
-                            <input type="text" class="input" required>
-                            <label for="">Ime</label>
+                            <input type="text" class="input" id="name" name="name" required>
+                            <label for="name">Ime</label>
                         </div>
     
                         <div class="input_box">
-                            <input type="email" class="input" required>
-                            <label for="">G-mail</label>
+                            <input type="email" id="email" name="email" class="input" required>
+                            <label for="email">G-mail</label>
                         </div>
     
                         <div class="input_box">
-                            <input type="tel" class="input" required>
-                            <label for="">Telefonska številka</label>
+                            <input type="tel" id="tel" name="tel" class="input" required>
+                            <label for="tel">Telefonska številka</label>
                         </div>
                         <div class="input_box">
-                            <input type="text" class="input" required>
-                            <label for="">Zadeva</label>
+                            <input type="text" id="subject" name="subject" class="input" required>
+                            <label for="subject">Zadeva</label>
                         </div>
     
                         <div class="input_box">
-                            <textarea name="" class="input" required id="message" cols="30" rows="10" ></textarea>
-                            <label for="">Message</label>
+                            <textarea name="message" id="message" class="input" required id="message" cols="30" rows="10" ></textarea>
+                            <label for="message">Message</label>
                         </div>
-                        <button type="submit" class="btn"> Pošlji sporočilo</button>
+                        <button type="submit" class="btn" name="message"> Pošlji sporočilo</button>
                             
     
                     </form>
